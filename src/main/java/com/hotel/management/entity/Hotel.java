@@ -5,31 +5,47 @@ import java.util.List;
 public class Hotel {
     private String name;
     private String regularCustomerRates;
-    private String newCustomerRates;
-    private String newCustomerWeekendRates;
+    private String rewardsCustomerRates;
+    private String rewardsCustomerWeekendRates;
     private String regularCustomerWeekendRates;
     private List<String> regularCustomers;
 
     public Hotel() {
     }
 
-    public Hotel(String name, String regularCustomerRates, String newCustomerRates, String newCustomerWeekendRates, String regularCustomerWeekendRates, List<String> regularCustomers) {
+    public Hotel(String name, String regularCustomerRates, String rewardsCustomerRates, String rewardsCustomerWeekendRates, String regularCustomerWeekendRates, List<String> regularCustomers) {
         this.name = name;
         this.regularCustomerRates = regularCustomerRates;
-        this.newCustomerRates = newCustomerRates;
-        this.newCustomerWeekendRates = newCustomerWeekendRates;
+        this.rewardsCustomerRates = rewardsCustomerRates;
+        this.rewardsCustomerWeekendRates = rewardsCustomerWeekendRates;
         this.regularCustomerWeekendRates = regularCustomerWeekendRates;
         this.regularCustomers = regularCustomers;
     }
 
     @Override
     public String toString() {
-        return "Hotel{" +
-                "name='" + name + '\'' +
+        return "name='" + name + '\'' +
                 ", regularCustomerRates='" + regularCustomerRates + '\'' +
-                ", newCustomerRates='" + newCustomerRates + '\'' +
-                ", regularCustomers=" + regularCustomers +
-                '}';
+                ", rewardsCustomerRates='" + rewardsCustomerRates + '\'' +
+                ", rewardsCustomerWeekendRates='" + rewardsCustomerWeekendRates + '\'' +
+                ", regularCustomerWeekendRates='" + regularCustomerWeekendRates + '\'' +
+                ", regularCustomers=" + regularCustomers;
+    }
+
+    public String getrewardsCustomerWeekendRates() {
+        return rewardsCustomerWeekendRates;
+    }
+
+    public void setrewardsCustomerWeekendRates(String rewardsCustomerWeekendRates) {
+        this.rewardsCustomerWeekendRates = rewardsCustomerWeekendRates;
+    }
+
+    public String getRegularCustomerWeekendRates() {
+        return regularCustomerWeekendRates;
+    }
+
+    public void setRegularCustomerWeekendRates(String regularCustomerWeekendRates) {
+        this.regularCustomerWeekendRates = regularCustomerWeekendRates;
     }
 
     public String getName() {
@@ -48,12 +64,12 @@ public class Hotel {
         this.regularCustomerRates = regularCustomerRates;
     }
 
-    public String getNewCustomerRates() {
-        return newCustomerRates;
+    public String getrewardsCustomerRates() {
+        return rewardsCustomerRates;
     }
 
-    public void setNewCustomerRates(String newCustomerRates) {
-        this.newCustomerRates = newCustomerRates;
+    public void setrewardsCustomerRates(String rewardsCustomerRates) {
+        this.rewardsCustomerRates = rewardsCustomerRates;
     }
 
     public List<String> getRegularCustomers() {
