@@ -41,7 +41,7 @@ public class Application {
            String fromDate = scanner.nextLine();
            System.out.print("Enter To Date in (DD-MM-YYYY) : ");
            String toDate = scanner.nextLine();
-           Map.Entry<String, Double> result = hotelManagementService.findCheapestHotel(fromDate ,toDate);
+           Map.Entry<String, Double> result = hotelManagementService.findCheapestHotel(fromDate, toDate);
            System.out.println("Hotel Name : "+result.getKey()+"  Total cost : "+result.getValue());
        } catch (Exception ex) {
            System.out.println("Please enter a valid date in format (DD-MM-YYYY)");
@@ -60,7 +60,9 @@ public class Application {
         String regularCustomerWeekendRate = scanner.nextLine();
         System.out.print("RewardsCustomerWeekendRate : ");
         String newCustomerWeekendRate = scanner.nextLine();
-        Hotel hotel = hotelManagementService.addHotel(hotelName, regularCustomerRate, newCustomerRate, regularCustomerWeekendRate, newCustomerWeekendRate);
-        System.out.println("\nHotels added : " + hotel);
+        System.out.println("Give Rating to "+hotelName+ ":");
+        String rating = scanner.nextLine();
+        Hotel hotel = hotelManagementService.addHotel(hotelName, rating, regularCustomerRate, newCustomerRate, regularCustomerWeekendRate, newCustomerWeekendRate);
+        System.out.println("\nHotel" +" "+hotelName+" " +"added : " + hotel);
     }
 }

@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Hotel {
     private String name;
+    private String rating;
     private String regularCustomerRates;
     private String rewardsCustomerRates;
     private String rewardsCustomerWeekendRates;
@@ -13,8 +14,9 @@ public class Hotel {
     public Hotel() {
     }
 
-    public Hotel(String name, String regularCustomerRates, String rewardsCustomerRates, String rewardsCustomerWeekendRates, String regularCustomerWeekendRates, List<String> regularCustomers) {
+    public Hotel(String name, String rating, String regularCustomerRates, String rewardsCustomerRates, String rewardsCustomerWeekendRates, String regularCustomerWeekendRates, List<String> regularCustomers) {
         this.name = name;
+        this.rating = rating;
         this.regularCustomerRates = regularCustomerRates;
         this.rewardsCustomerRates = rewardsCustomerRates;
         this.rewardsCustomerWeekendRates = rewardsCustomerWeekendRates;
@@ -25,6 +27,7 @@ public class Hotel {
     @Override
     public String toString() {
         return "name='" + name + '\'' +
+                ", rating='" + rating + '\'' +
                 ", regularCustomerRates='" + regularCustomerRates + '\'' +
                 ", rewardsCustomerRates='" + rewardsCustomerRates + '\'' +
                 ", rewardsCustomerWeekendRates='" + rewardsCustomerWeekendRates + '\'' +
@@ -74,6 +77,14 @@ public class Hotel {
 
     public List<String> getRegularCustomers() {
         return regularCustomers;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
     }
 
     public void setRegularCustomers(List<String> regularCustomers) {

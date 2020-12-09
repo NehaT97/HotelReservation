@@ -14,9 +14,9 @@ public class HotelManagementService {
         hotelsData = new ArrayList<>();
     }
 
-    public Hotel addHotel(String hotelName, String regularCustomerRates, String rewardsCustomerRates, String regularCustomerWeekendRates,
+    public Hotel addHotel(String hotelName, String rating, String regularCustomerRates, String rewardsCustomerRates, String regularCustomerWeekendRates,
                           String rewardsCustomerWeekendRates, String ...regularCustomers){
-        Hotel hotel = new Hotel(hotelName, regularCustomerRates, rewardsCustomerRates,
+        Hotel hotel = new Hotel(hotelName, rating, regularCustomerRates, rewardsCustomerRates,
                 rewardsCustomerWeekendRates,regularCustomerWeekendRates, Arrays.asList(regularCustomers));
         hotelsData.add(hotel);
         return hotel;
